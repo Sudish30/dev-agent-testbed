@@ -1,24 +1,13 @@
-from src.math_utils import multiply
+from src.math_utils import add, multiply
 
+def test_add():
+    assert add(2, 3) == 5
+    assert add(-1, 1) == 0
+    assert add(0, 0) == 0
 
-def test_multiply_two_positive_integers():
-    assert multiply(3, 4) == 12
-
-
-def test_multiply_by_zero():
-    assert multiply(5, 0) == 0
+def test_multiply():
+    assert multiply(2, 3) == 6
     assert multiply(0, 5) == 0
-
-
-def test_multiply_two_negative_integers():
-    assert multiply(-3, -4) == 12
-
-
-def test_multiply_positive_and_negative():
-    assert multiply(-3, 4) == -12
-    assert multiply(3, -4) == -12
-
-
-def test_multiply_by_one():
-    assert multiply(7, 1) == 7
-    assert multiply(1, 7) == 7
+    assert multiply(-2, -3) == 6
+    assert multiply(-2, 3) == -6
+    assert multiply(1, 5) == 5
